@@ -28,7 +28,11 @@ python -m world_cup_calendar
 By default this writes:
 
 - `dist\world-cup.ics`
+- `dist\index.html`
 - `dist\world-cup-summary.html`
+- `dist\world-cup-summary-preview-eclipse-amber.html`
+- `dist\world-cup-summary-preview-ion-rose.html`
+- `dist\world-cup-summary-preview-lunar-lime.html`
 - `.state\world-cup-state.json`
 - `C:\Users\thebl\OneDrive\Projects\Zealot\world-cup.ics` on Windows
 - `C:\Users\thebl\OneDrive\Projects\Zealot\world-cup-summary.html` on Windows
@@ -65,9 +69,27 @@ Good options:
 1. Static hosting or object storage that serves `world-cup.ics` directly
 2. OneDrive or iCloud only if you can provide a durable direct-download URL to the exact file
 
+## GitHub Pages publishing
+
+This repository is set up to publish the `dist` directory through GitHub Pages from the existing scheduled workflow.
+
+Expected URLs for `theblackrich/zealot`:
+
+- Landing page: `https://theblackrich.github.io/zealot/`
+- ICS feed: `https://theblackrich.github.io/zealot/world-cup.ics`
+- Summary page: `https://theblackrich.github.io/zealot/world-cup-summary.html`
+
+Repository setup:
+
+1. Ensure the repo exists on GitHub as `theblackrich/zealot`
+2. In repository **Settings > Pages**, set **Source** to **GitHub Actions**
+3. Run the `Refresh World Cup calendar` workflow once manually or wait for the next scheduled run
+
+The workflow publishes `dist\index.html` as the site root landing page and serves the ICS file directly from the same Pages site.
+
 ## HTML summary
 
-Each run also writes `world-cup-summary.html` beside the ICS output. The summary includes:
+Each run also writes `index.html` and `world-cup-summary.html` beside the ICS output, plus a small set of sibling preview variants with alternate accent colors inside the same retro-modern space system. The summary includes:
 
 - how to run and use the project,
 - where the generated files were written,
