@@ -1,0 +1,25 @@
+name: Refresh World Cup calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 21 * 6-7 *"
+    - cron: "0 23 * 6-7 *"
+    - cron: "0 1 * 6-7 *"
+    - cron: "0 5 * 6-7 *"
+
+jobs:
+  build-calendar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate calendar
+        run: python -m world_cup_calendar
+      - name: Upload generated artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: world-cup-calendar
+          path: dist

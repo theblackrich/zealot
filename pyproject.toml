@@ -1,0 +1,5 @@
+[project]
+name = "world-cup-calendar"
+version = "0.1.0"
+description = "Generate a subscribable World Cup calendar feed with stable event UIDs."
+requires-python = ">=3.11"
