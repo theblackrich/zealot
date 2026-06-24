@@ -41,7 +41,7 @@ def build_calendar(events: list[MatchEvent], existing_state: dict[str, EventStat
 
 
 def build_uid(event: MatchEvent) -> str:
-    slug = slugify(f"{event.tournament}-{event.home_team}-{event.away_team}-{event.start_utc:%Y%m%dT%H%M%SZ}")
+    slug = slugify(f"{event.tournament}-{event.source_id}")
     return f"{slug}@zealot.local"
 
 

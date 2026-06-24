@@ -28,6 +28,7 @@ IMPLEMENTED_ACTIONS = [
     "Scaffolded a greenfield Python project in the previously empty repository.",
     "Integrated the openfootball/worldcup source dataset and selected the latest tournament directory automatically.",
     "Parsed only scheduled fixture lines so the calendar contains upcoming World Cup matches.",
+    "Merged the group-stage and knockout schedule sources so the feed now spans all upcoming matches through the final.",
     "Generated a deterministic ICS feed with stable event UIDs and persisted sequence state.",
     "Added scheduled refresh automation for 2 PM, 4 PM, 6 PM, and 10 PM Pacific Time.",
     "Configured Windows runs to copy the ICS file into C:\\Users\\thebl\\OneDrive\\Projects\\Zealot.",

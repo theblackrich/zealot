@@ -5,7 +5,7 @@ This project generates a subscribable `.ics` feed for World Cup matches and keep
 ## What it does
 
 - Pulls the latest World Cup tournament text from the public `openfootball/worldcup` dataset
-- Parses upcoming fixtures from the tournament file
+- Parses upcoming fixtures from the tournament files, including knockout placeholders through the final
 - Generates a deterministic ICS calendar feed
 - Persists event fingerprints and increments `SEQUENCE` only when an event changes
 - Writes the feed to disk and copies it to your OneDrive publish location on Windows by default
@@ -130,4 +130,5 @@ Use **Other calendars > From URL** and paste the public ICS URL.
 ## Notes
 
 - The current source adapter intentionally parses scheduled fixtures (`v`) rather than completed result lines.
+- It merges `cup.txt` and `cup_finals.txt` so the feed includes all upcoming scheduled matches through the final while still updating knockout participants in place as they become known.
 - If the source file changes event time, venue, or matchup text, the event `UID` stays stable and the `SEQUENCE` increases.

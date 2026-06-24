@@ -18,7 +18,8 @@ DATE_PATTERN = re.compile(
     r"(?P<day>\d{1,2})$"
 )
 MATCH_PATTERN = re.compile(
-    r"^\s*(?P<time>\d{1,2}:\d{2})\s+"
+    r"^\s*(?:\((?P<match_number>\d+)\)\s+)?"
+    r"(?P<time>\d{1,2}:\d{2})\s+"
     r"(?P<offset>UTC[+-]\d{1,2})\s+"
     r"(?P<home>.+?)\s+v\s+"
     r"(?P<away>.+?)\s+@\s+"
@@ -61,8 +62,12 @@ class TournamentSource:
 
     def fetch_matches(self) -> list[MatchEvent]:
         tournament_path = self.tournament_path or self._latest_tournament_path()
-        text = self._fetch_text_file(f"{tournament_path}/cup.txt")
-        return parse_openfootball_matches(text)
+        matches: dict[str, MatchEvent] = {}
+        for source_file in ("cup.txt", "cup_finals.txt"):
+            text = self._fetch_text_file(f"{tournament_path}/{source_file}")
+            for match in parse_openfootball_matches(text):
+                matches[match.source_id] = match
+        return sorted(matches.values(), key=lambda match: match.start_utc)
 
     def _latest_tournament_path(self) -> str:
         url = f"https://api.github.com/repos/{quote(self.owner)}/{quote(self.repo)}/contents/"
@@ -121,13 +126,21 @@ def parse_openfootball_matches(text: str) -> list[MatchEvent]:
             current_date = _parse_date(line, tournament_year)
             continue
 
-        match_match = MATCH_PATTERN.match(raw_line)
+        match_line = raw_line.split("##", maxsplit=1)[0].rstrip()
+        match_match = MATCH_PATTERN.match(match_line)
         if match_match:
             if current_stage is None or current_date is None:
                 raise ValueError(f"Encountered a match before establishing stage/date context: {raw_line}")
             start_utc = _parse_start(current_date, match_match.group("time"), match_match.group("offset"))
             matches.append(
                 MatchEvent(
+                    source_id=_build_source_id(
+                        stage=current_stage,
+                        match_date=current_date,
+                        match_number=match_match.group("match_number"),
+                        home_team=match_match.group("home").strip(),
+                        away_team=match_match.group("away").strip(),
+                    ),
                     tournament=tournament_name,
                     stage=current_stage,
                     start_utc=start_utc,
@@ -157,3 +170,24 @@ def _parse_start(match_date: date, time_value: str, offset_value: str) -> dateti
     tz = timezone(sign * timedelta(hours=offset_hours))
     local_dt = datetime(match_date.year, match_date.month, match_date.day, hours, minutes, tzinfo=tz)
     return local_dt.astimezone(timezone.utc)
+
+
+def _build_source_id(
+    *,
+    stage: str,
+    match_date: date,
+    match_number: str | None,
+    home_team: str,
+    away_team: str,
+) -> str:
+    if match_number is not None:
+        return f"match-{int(match_number):03d}"
+
+    stage_slug = _slugify(stage)
+    home_slug = _slugify(home_team)
+    away_slug = _slugify(away_team)
+    return f"{stage_slug}-{match_date:%Y%m%d}-{home_slug}-{away_slug}"
+
+
+def _slugify(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")

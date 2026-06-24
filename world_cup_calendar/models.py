@@ -6,6 +6,7 @@ from datetime import datetime
 
 @dataclass(frozen=True)
 class MatchEvent:
+    source_id: str
     tournament: str
     stage: str
     start_utc: datetime
