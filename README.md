@@ -73,7 +73,7 @@ Good options:
 
 This repository is set up to publish the `dist` directory through GitHub Pages from the existing scheduled workflow.
 
-Expected URLs for `theblackrich/zealot`:
+Live URLs for `theblackrich/zealot`:
 
 - Landing page: `https://theblackrich.github.io/zealot/`
 - ICS feed: `https://theblackrich.github.io/zealot/world-cup.ics`
@@ -81,11 +81,17 @@ Expected URLs for `theblackrich/zealot`:
 
 Repository setup:
 
-1. Ensure the repo exists on GitHub as `theblackrich/zealot`
-2. In repository **Settings > Pages**, set **Source** to **GitHub Actions**
-3. Run the `Refresh World Cup calendar` workflow once manually or wait for the next scheduled run
+1. The repo exists on GitHub as `theblackrich/zealot`
+2. In repository **Settings > Pages**, **Source** is configured for **GitHub Actions**
+3. The `Refresh World Cup calendar` workflow deploys the latest `dist` output to Pages
 
 The workflow publishes `dist\index.html` as the site root landing page and serves the ICS file directly from the same Pages site.
+
+Use these URLs for subscriptions:
+
+- Outlook: **Add calendar > Subscribe from web** with `https://theblackrich.github.io/zealot/world-cup.ics`
+- Apple Calendar: **File > New Calendar Subscription** with `https://theblackrich.github.io/zealot/world-cup.ics`
+- Google Calendar: **Other calendars > From URL** with `https://theblackrich.github.io/zealot/world-cup.ics`
 
 ## HTML summary
 

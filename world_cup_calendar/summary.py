@@ -20,7 +20,7 @@ BODY_FONT_STACK = '"Inter", "Segoe UI", Arial, sans-serif'
 CURRENT_PLAN = [
     "Generate the World Cup ICS feed and the HTML summary on every run.",
     "Copy the generated artifacts into the local OneDrive project folder on Windows.",
-    "Publish the ICS file from a stable public HTTPS URL for Outlook, Apple Calendar, and Google Calendar subscriptions.",
+    "Publish the ICS file from the live GitHub Pages URL https://theblackrich.github.io/zealot/world-cup.ics for Outlook, Apple Calendar, and Google Calendar subscriptions.",
     "Keep deterministic UIDs and sequence tracking so subscribed clients update events instead of duplicating them.",
 ]
 
@@ -31,13 +31,14 @@ IMPLEMENTED_ACTIONS = [
     "Generated a deterministic ICS feed with stable event UIDs and persisted sequence state.",
     "Added scheduled refresh automation for 2 PM, 4 PM, 6 PM, and 10 PM Pacific Time.",
     "Configured Windows runs to copy the ICS file into C:\\Users\\thebl\\OneDrive\\Projects\\Zealot.",
+    "Published the calendar, landing page, and summary on GitHub Pages at https://theblackrich.github.io/zealot/.",
     "Added this HTML summary artifact so usage, plan, and implementation details ship with each run.",
 ]
 
 HOW_TO_USE = [
     "Run python -m world_cup_calendar to regenerate the calendar artifacts.",
     "Use the ICS file for publishing or subscription workflows; do not repeatedly import separate copies if you want update-in-place behavior.",
-    "Serve the same world-cup.ics file from a stable URL when you are ready to subscribe from Outlook, Apple Calendar, or Google Calendar.",
+    "Subscribe to https://theblackrich.github.io/zealot/world-cup.ics from Outlook, Apple Calendar, or Google Calendar for automatic updates.",
     "Open this HTML file in a browser for the current project summary and operating instructions, then compare the preview sibling files if you want to review alternate visual directions.",
 ]
 
