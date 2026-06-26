@@ -1,44 +1,4 @@
 {
-  "world-cup-2026-group-a-20260624-czech-republic-mexico@zealot.local": {
-    "fingerprint": "839ffc89f1b789694cef15aa8ac3482da7ad02188fdd0ab219c82faaa31a958c",
-    "sequence": 0
-  },
-  "world-cup-2026-group-a-20260624-south-africa-south-korea@zealot.local": {
-    "fingerprint": "023b9ab8d2c353b9ee768b2d64b83adf6472a17ae46770b650918518a3763b85",
-    "sequence": 0
-  },
-  "world-cup-2026-group-c-20260624-morocco-haiti@zealot.local": {
-    "fingerprint": "7bac24791319582fbdc18ec36bf8e28b281adc9aaf01c4f4b52f07f8561a5f2a",
-    "sequence": 0
-  },
-  "world-cup-2026-group-c-20260624-scotland-brazil@zealot.local": {
-    "fingerprint": "7e36e4fb41c5d28efcd856d7523a3b0b16282541597c649020b61bedb5e1cb1d",
-    "sequence": 0
-  },
-  "world-cup-2026-group-d-20260625-paraguay-australia@zealot.local": {
-    "fingerprint": "4b3014a1832247b9cb6cbf301283012ff970ac4429dece47794ba55413544c43",
-    "sequence": 0
-  },
-  "world-cup-2026-group-d-20260625-turkey-usa@zealot.local": {
-    "fingerprint": "12f5e37706d614a4fad7a778944299cc9cc777510be2c372b02ee520f9e05163",
-    "sequence": 0
-  },
-  "world-cup-2026-group-e-20260625-cura-ao-ivory-coast@zealot.local": {
-    "fingerprint": "82cb686e8e92fb97b0b8cf37d8647b593804fcb4b4dc3b12fbb02f8605d3d0d9",
-    "sequence": 0
-  },
-  "world-cup-2026-group-e-20260625-ecuador-germany@zealot.local": {
-    "fingerprint": "a75bb6d5906b39d8a87c099aa98a9c1db75da49bc43c1f6d0d43a1ba6e5314ea",
-    "sequence": 0
-  },
-  "world-cup-2026-group-f-20260625-japan-sweden@zealot.local": {
-    "fingerprint": "9e820ef22c5b4cf5276202ba12247d6d9c17d2a20992774aa90f62da17f3d075",
-    "sequence": 0
-  },
-  "world-cup-2026-group-f-20260625-tunisia-netherlands@zealot.local": {
-    "fingerprint": "47547313b76102535bac3334eb7b533496540d5367921b0dabf81a456a36258d",
-    "sequence": 0
-  },
   "world-cup-2026-group-g-20260626-egypt-iran@zealot.local": {
     "fingerprint": "1a2cea64d6413a27cf145eeaf908351fe711f48ebc9145239507f0ab70e51b5b",
     "sequence": 0
@@ -88,28 +48,28 @@
     "sequence": 0
   },
   "world-cup-2026-match-073@zealot.local": {
-    "fingerprint": "eabe2fe07f25dfedd1cfff839a6d2a42a9f7a5dae1e75901997e7310e574a4cf",
-    "sequence": 0
+    "fingerprint": "2d1a6df585607afbb3f5344ef84f72a0c4dbf15a41c6a6aaf90263db5b0a45c4",
+    "sequence": 1
   },
   "world-cup-2026-match-074@zealot.local": {
     "fingerprint": "7e1c23cd1b1537eb8a3867659853cfecabea3089cacf355945d0916a12891203",
     "sequence": 1
   },
   "world-cup-2026-match-075@zealot.local": {
-    "fingerprint": "192ce54273463acbe72f9f374d6965d67edfbaa24a63077dc89a57c3eecf57a7",
-    "sequence": 0
+    "fingerprint": "85e2394fb13c7ffab2aae091389442a567aa85abb89f1d3fe85a53507ab721d1",
+    "sequence": 1
   },
   "world-cup-2026-match-076@zealot.local": {
-    "fingerprint": "8b7251ffc9e3de57a07965ea6b6e3e7796583d9206437a12c2bfd7728d3e8d3b",
-    "sequence": 0
+    "fingerprint": "8df5aceb602922d5a06eaefe6f893a34b922690089fbef4b1dc02c24ffc43998",
+    "sequence": 1
   },
   "world-cup-2026-match-077@zealot.local": {
     "fingerprint": "fc268f7947f47b449e446f37da59f6d46e9aff66430455ae266605213867ac5f",
     "sequence": 0
   },
   "world-cup-2026-match-078@zealot.local": {
-    "fingerprint": "f7eef2cd6a8081e1a9194f0d49bce34f540636504299287b72d07c9e99c2874a",
-    "sequence": 0
+    "fingerprint": "279de69f0c6111beb1838b1f1cf1e98fb941003d4874189e0c7d785b0783ea95",
+    "sequence": 1
   },
   "world-cup-2026-match-079@zealot.local": {
     "fingerprint": "c07809a864f2afafc9f6aa04ec9fcb8a0c87835a8e49152446a9558130273fa4",
@@ -136,8 +96,8 @@
     "sequence": 0
   },
   "world-cup-2026-match-085@zealot.local": {
-    "fingerprint": "c1fdd99b09d08f61f345173c015854500762799de1e3a630bfc0bd9d6cf9089b",
-    "sequence": 0
+    "fingerprint": "d632244d2a0dbdf5ea01102bca3c11a8264138915069d301f4b2695e20e86dfe",
+    "sequence": 1
   },
   "world-cup-2026-match-086@zealot.local": {
     "fingerprint": "a33abb87812040cd662a8c3bd6fd564b061ecf85058de15f8f652ca5291cc7ea",
@@ -148,8 +108,8 @@
     "sequence": 0
   },
   "world-cup-2026-match-088@zealot.local": {
-    "fingerprint": "c7e49b1f3d5188e0ff96b8a0e9cd9d23d266877bb49dc59b95c17176b54fed1f",
-    "sequence": 0
+    "fingerprint": "6238ae39eb26a334e47b0799a49d323791af4d4980101baa56347e10857abc82",
+    "sequence": 1
   },
   "world-cup-2026-match-089@zealot.local": {
     "fingerprint": "4fd5b6bbdb4943b20576d45e27d444a208acfb1ba02aa41241bedad069a536b3",
